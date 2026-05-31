@@ -33,9 +33,9 @@ body {
 }
 
 /* ===== LOGO ===== */
-.logo-link { text-decoration: none; display: flex; align-items: center; }
+.logo-link { text-decoration: none; display: flex; align-items: center; flex: 1; }
 .logo-img { height: 44px; width: auto; }
-.logo-text { font-family: 'Pacifico', cursive; font-size: 1.3rem; color: var(--purple); }
+.logo-text { font-family: 'Pacifico', cursive; font-size: 1.8rem; color: var(--purple); font-weight: 700; letter-spacing: 1px; }
 .footer-logo-img { height: 52px; width: auto; margin-bottom: 12px; }
 
 /* ===== HEADER ===== */
@@ -168,7 +168,7 @@ body {
 
 .hero-bg { position: absolute; inset: 0; }
 .hero-foto { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(123,45,139,0.78) 0%, rgba(233,30,140,0.55) 100%); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(123,45,139,0.35) 0%, rgba(233,30,140,0.25) 100%); }
 .hero-content { color: white; }
 .hero-sub { color: rgba(255,255,255,0.9); }
 .hero-trust { color: rgba(255,255,255,0.8); }
