@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Personagens vivos para festas infantis em São Paulo, ABC, Campinas, Jundiaí e Brotas. Elsa, Ariel, Barbie, Hermione e muito mais! Faça seu orçamento agora." />
   <meta name="keywords" content="personagens vivos festa infantil, princesas festa infantil São Paulo, Elsa festa, Barbie festa, personagens para festa criança SP" />
-  <meta property="og:title" content="O Mundo Fantástico — Personagens Vivos para Festas Infantis" />
-  <meta property="og:description" content="Transforme a festa do seu filho em um momento mágico inesquecível com nossos personagens vivos!" />
-  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta property="og:title" content="O Mundo Fantástico — Aqui a Magia Acontece" />
+  <meta property="og:description" content="Seus personagens preferidos ganham vida. Festas, eventos e animações inesquecíveis para crianças em SP e região." />
+  <meta property="og:image" content="assets/img/hero.jpg" />
   <meta property="og:type" content="website" />
   <title>O Mundo Fantástico | Personagens Vivos para Festas Infantis em SP</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,20 +16,27 @@
 </head>
 <body>
 
-  <!-- HEADER / NAV -->
+  <!-- HEADER -->
   <header class="header">
     <nav class="nav container">
-      <div class="logo">✨ O Mundo Fantástico</div>
+      <a href="#" class="logo-link">
+        <img src="assets/img/logo.png" alt="O Mundo Fantástico" class="logo-img" onerror="this.style.display='none';this.nextSibling.style.display='block'">
+        <span class="logo-text" style="display:none">✨ O Mundo Fantástico</span>
+      </a>
       <a href="#orcamento" class="btn-nav">Quero um Orçamento</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/img/hero.jpg" alt="Personagens O Mundo Fantástico" class="hero-foto" onerror="this.style.display='none'">
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-content container">
-      <span class="hero-badge">🎉 Festas Inesquecíveis em SP e Região</span>
-      <h1>Transforme a festa do seu filho em um <span class="highlight">conto de fadas real</span></h1>
-      <p class="hero-sub">Personagens vivos, fantasias deslumbrantes e muita magia para fazer os olhinhos brilharem. Atendemos São Paulo, ABC, Campinas, Jundiaí e Brotas.</p>
+      <span class="hero-badge">✨ Festas Inesquecíveis em SP e Região</span>
+      <h1>Aqui a <span class="highlight">magia</span> acontece</h1>
+      <p class="hero-sub">Seus personagens preferidos ganham vida. Festas, eventos e animações — seu filho merece viver essa experiência inesquecível. 💫</p>
       <div class="hero-ctas">
         <a href="#orcamento" class="btn-primary">Solicitar Orçamento Grátis</a>
         <a href="https://wa.me/5511950577511?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20personagens%20para%20festa!" class="btn-whatsapp" target="_blank" rel="noopener">
@@ -41,13 +48,51 @@
         <span>⭐⭐⭐⭐⭐</span>
         <span>+100 festas realizadas</span>
         <span>•</span>
-        <span>Atendimento em SP e região</span>
+        <span>SP • ABC • Campinas • Jundiaí • Brotas</span>
       </div>
     </div>
-    <div class="hero-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">📸 Nossa Galeria</span>
+        <h2>Momentos reais de pura magia</h2>
+        <p>Cada foto é uma memória criada com amor, dedicação e muito brilho ✨</p>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item grande">
+          <img src="assets/img/galeria-1.jpg" alt="Festa com personagens O Mundo Fantástico" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/galeria-2.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/galeria-3.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/galeria-4.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
+        </div>
+        <div class="galeria-item">
+          <img src="assets/img/galeria-5.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
+        </div>
+        <div class="galeria-item grande">
+          <img src="assets/img/galeria-6.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
+        </div>
+      </div>
+      <div class="galeria-cta">
+        <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="btn-instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Ver mais no Instagram @omundo.fantastico
+        </a>
+      </div>
     </div>
   </section>
 
@@ -57,7 +102,7 @@
       <div class="section-header">
         <span class="section-tag">✨ Nossos Personagens</span>
         <h2>Qual é o personagem favorito do seu filho?</h2>
-        <p>Temos os personagens mais amados pelas crianças, com fantasias incríveis e muito talento para encantar!</p>
+        <p>Fantasias deslumbrantes e muito talento para fazer os olhinhos brilharem!</p>
       </div>
       <div class="personagens-grid">
         <div class="personagem-card" style="--cor: #A8D8EA">
@@ -81,7 +126,7 @@
           <p>Branca de Neve</p>
         </div>
         <div class="personagem-card" style="--cor: #FFE4A0">
-          <div class="personagem-icon">🧞‍♂️</div>
+          <div class="personagem-icon">🧞</div>
           <h3>Jasmine</h3>
           <p>Aladdin</p>
         </div>
@@ -227,10 +272,7 @@
           <p>"A Elsa foi incrível! Minha filha ficou na boca aberta quando ela entrou. Superou todas as expectativas. Com certeza contratarei novamente!"</p>
           <div class="depoimento-autor">
             <div class="autor-avatar">A</div>
-            <div>
-              <strong>Ana Paula M.</strong>
-              <span>São Paulo - SP</span>
-            </div>
+            <div><strong>Ana Paula M.</strong><span>São Paulo - SP</span></div>
           </div>
         </div>
         <div class="depoimento-card">
@@ -238,10 +280,7 @@
           <p>"Contratei a Barbie para o aniversário da minha sobrinha e foi um sucesso! Profissionalismo do início ao fim. As crianças adoraram!"</p>
           <div class="depoimento-autor">
             <div class="autor-avatar">C</div>
-            <div>
-              <strong>Carla S.</strong>
-              <span>Santo André - SP</span>
-            </div>
+            <div><strong>Carla S.</strong><span>Santo André - SP</span></div>
           </div>
         </div>
         <div class="depoimento-card">
@@ -249,10 +288,7 @@
           <p>"A Hermione apareceu e as crianças enlouqueceram! Muito carinho, interação e profissionalismo. Vale cada centavo. Indico de olhos fechados!"</p>
           <div class="depoimento-autor">
             <div class="autor-avatar">R</div>
-            <div>
-              <strong>Renata F.</strong>
-              <span>Campinas - SP</span>
-            </div>
+            <div><strong>Renata F.</strong><span>Campinas - SP</span></div>
           </div>
         </div>
       </div>
@@ -277,14 +313,14 @@
     </div>
   </section>
 
-  <!-- FORMULÁRIO DE ORÇAMENTO -->
+  <!-- ORÇAMENTO -->
   <section class="orcamento" id="orcamento">
     <div class="container">
       <div class="orcamento-wrapper">
         <div class="orcamento-info">
           <span class="section-tag">🎯 Orçamento Gratuito</span>
-          <h2>Pronta para tornar o sonho do seu filho realidade?</h2>
-          <p>Preencha o formulário ao lado e entraremos em contato em até 1 hora com todas as informações e valores.</p>
+          <h2>Seu filho merece viver essa experiência inesquecível ✨</h2>
+          <p>Preencha o formulário e entraremos em contato em até 1 hora com todas as informações e valores.</p>
           <div class="orcamento-beneficios">
             <div class="beneficio">✅ Resposta em até 1 hora</div>
             <div class="beneficio">✅ Sem compromisso</div>
@@ -318,7 +354,7 @@
                 <option value="Ariel">🧜‍♀️ Ariel</option>
                 <option value="Branca de Neve">🍎 Branca de Neve</option>
                 <option value="Rainha Má">👑 Rainha Má</option>
-                <option value="Jasmine">🧞‍♂️ Jasmine</option>
+                <option value="Jasmine">🧞 Jasmine</option>
                 <option value="Barbie">👗 Barbie</option>
                 <option value="Hermione">🪄 Hermione</option>
                 <option value="Wandinha">🖤 Wandinha</option>
@@ -330,9 +366,9 @@
               <label for="pacote">Pacote de interesse</label>
               <select id="pacote" name="pacote">
                 <option value="">Selecione um pacote</option>
-                <option value="Encanto (1h) - R$400">✨ Encanto — 1 hora (R$ 400)</option>
-                <option value="Mágico (2h) - R$500">🪄 Mágico — 2 horas (R$ 500)</option>
-                <option value="Real (3h) - R$700">👑 Real — 3 horas (R$ 700)</option>
+                <option value="Encanto 1h R$400">✨ Encanto — 1 hora (R$ 400)</option>
+                <option value="Mágico 2h R$500">🪄 Mágico — 2 horas (R$ 500)</option>
+                <option value="Real 3h R$700">👑 Real — 3 horas (R$ 700)</option>
               </select>
             </div>
             <div class="form-group">
@@ -343,9 +379,7 @@
               <label for="mensagem">Mensagem ou dúvidas</label>
               <textarea id="mensagem" name="mensagem" placeholder="Quantas crianças, tema da festa, alguma dúvida?" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn-submit">
-              🎉 Solicitar Meu Orçamento Grátis
-            </button>
+            <button type="submit" class="btn-submit">🎉 Solicitar Meu Orçamento Grátis</button>
           </form>
           <div id="formSucesso" class="form-sucesso" style="display:none;">
             <div class="sucesso-icon">🎊</div>
@@ -362,8 +396,9 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <div class="logo">✨ O Mundo Fantástico</div>
-          <p>Criando memórias mágicas em festas infantis por São Paulo e região.</p>
+          <img src="assets/img/logo.png" alt="O Mundo Fantástico" class="footer-logo-img" onerror="this.style.display='none';this.nextSibling.style.display='block'">
+          <div class="logo" style="display:none">✨ O Mundo Fantástico</div>
+          <p>Aqui a magia acontece. Personagens vivos para festas infantis em São Paulo e região.</p>
           <div class="footer-social">
             <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="social-link">
               📸 @omundo.fantastico
@@ -372,9 +407,9 @@
         </div>
         <div class="footer-links">
           <h4>Navegação</h4>
+          <a href="#galeria">Galeria</a>
           <a href="#personagens">Personagens</a>
           <a href="#pacotes">Pacotes</a>
-          <a href="#depoimentos">Depoimentos</a>
           <a href="#orcamento">Orçamento</a>
         </div>
         <div class="footer-contato">
