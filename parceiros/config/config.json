@@ -1,0 +1,16 @@
+{
+  "modo": "TESTE",
+  "numeros_teste": ["5511950577511"],
+  "empresa": {
+    "nome": "O Mundo Fantástico",
+    "responsavel": "Matheus",
+    "instagram": "@omundo.fantastico",
+    "site": "omundofantastico.com.br",
+    "whatsapp": "5511950577511"
+  },
+  "pausa_entre_envios_segundos": 18,
+  "pausa_variacao_segundos": 7,
+  "arquivo_parceiros": "data/parceiros.xlsx",
+  "arquivo_log": "logs/envios.log",
+  "template_ativo": "mensagem_inicial.txt"
+}
