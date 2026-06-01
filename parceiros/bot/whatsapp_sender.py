@@ -1,9 +1,12 @@
+import os
 import time
 import random
 import logging
 from urllib.parse import quote
 from dataclasses import dataclass
 from typing import Optional, Callable
+
+_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -55,7 +58,9 @@ class WhatsAppSender:
         opcoes.add_experimental_option("useAutomationExtension", False)
 
         # Mantém sessão entre execuções (evita re-scan do QR toda vez)
-        opcoes.add_argument("--user-data-dir=./chrome_session")
+        session_dir = os.path.join(_BASE_DIR, "chrome_session")
+        os.makedirs(session_dir, exist_ok=True)
+        opcoes.add_argument(f"--user-data-dir={session_dir}")
 
         if headless:
             opcoes.add_argument("--headless=new")
