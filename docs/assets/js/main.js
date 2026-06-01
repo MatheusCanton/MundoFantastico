@@ -23,7 +23,7 @@ function enviarFormulario(e) {
 *Cidade:* ${cidade}
 ${mensagem ? `*Mensagem:* ${mensagem}` : ''}`;
 
-  const url = `https://wa.me/5511950577511?text=${encodeURIComponent(texto)}`;
+  const url = `https://wa.me/5511964086730?text=${encodeURIComponent(texto)}`;
 
   document.getElementById('formOrcamento').style.display = 'none';
   document.getElementById('formSucesso').style.display = 'block';

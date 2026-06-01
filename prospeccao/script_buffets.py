@@ -19,7 +19,7 @@ Posso te contar mais detalhes? Quando teria 10 minutinhos para conversar?"""
 
 MINHA_INFO = {
     "nome": "Matheus",
-    "whatsapp": "5511950577511",
+    "whatsapp": "5511964086730",
     "instagram": "@omundo.fantastico",
 }
 
