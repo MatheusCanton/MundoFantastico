@@ -10,12 +10,10 @@ _BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from webdriver_manager.chrome import ChromeDriverManager
 
 logger = logging.getLogger(__name__)
 
@@ -65,8 +63,8 @@ class WhatsAppSender:
         if headless:
             opcoes.add_argument("--headless=new")
 
-        servico = Service(ChromeDriverManager().install())
-        self.driver = webdriver.Chrome(service=servico, options=opcoes)
+        # Selenium Manager (embutido no Selenium 4.6+) detecta o ChromeDriver correto automaticamente
+        self.driver = webdriver.Chrome(options=opcoes)
         self.driver.execute_script(
             "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
         )
