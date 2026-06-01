@@ -330,7 +330,53 @@ section { padding: 80px 0; }
   text-align: center;
   margin-top: 28px;
   color: var(--gray);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.pacote-desc {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+.pacote-card.destaque .pacote-desc { color: rgba(255,255,255,0.8); }
+
+.pacote-sub {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--purple);
+  margin: 16px 0 8px;
+  padding: 5px 10px;
+  background: var(--light);
+  border-radius: 8px;
+  display: inline-block;
+}
+.pacote-card.destaque .pacote-sub {
+  background: rgba(255,255,255,0.18);
+  color: white;
+}
+
+.feature-destaque {
+  background: rgba(255,215,0,0.15);
+  border-radius: 8px;
+  padding: 6px 8px !important;
+  margin: 2px 0;
+}
+.pacote-card.destaque .feature-destaque {
+  background: rgba(255,255,255,0.15);
+}
+
+.tag-popular {
+  font-size: 0.68rem;
+  font-weight: 800;
+  background: var(--gold);
+  color: #7a5500;
+  padding: 2px 7px;
+  border-radius: 50px;
+  margin-left: 4px;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 /* ===== PACOTE GRUPO (novo layout) ===== */
