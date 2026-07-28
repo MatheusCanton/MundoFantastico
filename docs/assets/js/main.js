@@ -9,6 +9,13 @@ function enviarFormulario(e) {
   const cidade = document.getElementById('cidade').value.trim();
   const mensagem = document.getElementById('mensagem').value.trim();
 
+  // Valida mínimo de dígitos no WhatsApp
+  const digitos = whatsapp.replace(/\D/g, '');
+  if (digitos.length < 10) {
+    alert('Por favor, informe um número de WhatsApp válido com DDD.');
+    return;
+  }
+
   const dataFormatada = data
     ? new Date(data + 'T12:00:00').toLocaleDateString('pt-BR')
     : 'A definir';
@@ -25,10 +32,11 @@ ${mensagem ? `*Mensagem:* ${mensagem}` : ''}`;
 
   const url = `https://wa.me/5511964086730?text=${encodeURIComponent(texto)}`;
 
+  // Abre WhatsApp antes de qualquer delay para não ser bloqueado como popup
+  window.open(url, '_blank');
+
   document.getElementById('formOrcamento').style.display = 'none';
   document.getElementById('formSucesso').style.display = 'block';
-
-  setTimeout(() => { window.open(url, '_blank'); }, 500);
 }
 
 // Máscara de telefone
@@ -40,6 +48,15 @@ document.getElementById('whatsapp').addEventListener('input', function () {
   }
   this.value = v;
 });
+
+// Impede seleção de datas passadas
+(function () {
+  const campoData = document.getElementById('data');
+  if (campoData) {
+    const hoje = new Date().toISOString().split('T')[0];
+    campoData.setAttribute('min', hoje);
+  }
+})();
 
 // Smooth scroll para links âncora
 document.querySelectorAll('a[href^="#"]').forEach(a => {
