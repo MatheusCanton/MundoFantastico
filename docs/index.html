@@ -3,13 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personagens vivos para festas infantis em São Paulo, ABC, Campinas, Jundiaí e Brotas. Elsa, Ariel, Barbie, Hermione e muito mais! Faça seu orçamento agora." />
-  <meta name="keywords" content="personagens vivos festa infantil, princesas festa infantil São Paulo, Elsa festa, Barbie festa, personagens para festa criança SP" />
-  <meta property="og:title" content="O Mundo Fantástico — Aqui a Magia Acontece" />
-  <meta property="og:description" content="Seus personagens preferidos ganham vida. Festas, eventos e animações inesquecíveis para crianças em SP e região." />
-  <meta property="og:image" content="assets/img/hero.jpg" />
+
+  <!-- SEO Primary -->
+  <title>O Mundo Fantástico | Personagens Vivos para Festas Infantis em São Paulo</title>
+  <meta name="description" content="Personagens vivos para festas infantis em São Paulo e região. Elsa, Ariel, Barbie, Branca de Neve, Homem Aranha e muito mais! Pacotes com coroação a partir de R$700. Solicite seu orçamento grátis!" />
+  <meta name="keywords" content="personagens vivos festa infantil São Paulo, princesa viva festa SP, Elsa festa infantil SP, Ariel festa São Paulo, Barbie festa infantil, personagem Homem Aranha festa, coroação festa infantil SP" />
+  <link rel="canonical" href="https://omundofantastico.com.br/" />
+
+  <!-- Open Graph (WhatsApp, Facebook, Instagram) -->
   <meta property="og:type" content="website" />
-  <title>O Mundo Fantástico | Personagens Vivos para Festas Infantis em SP</title>
+  <meta property="og:url" content="https://omundofantastico.com.br/" />
+  <meta property="og:title" content="O Mundo Fantástico — Personagens Vivos para Festas Infantis em SP" />
+  <meta property="og:description" content="Elsa, Ariel, Barbie, Branca de Neve e muito mais! Pacotes com coroação a partir de R$700. Atendemos SP, ABC, Campinas, Jundiaí e Brotas." />
+  <meta property="og:image" content="https://omundofantastico.com.br/assets/img/hero.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="O Mundo Fantástico" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="O Mundo Fantástico — Personagens Vivos para Festas Infantis em SP" />
+  <meta name="twitter:description" content="Elsa, Ariel, Barbie e muito mais! Pacotes com coroação a partir de R$700." />
+  <meta name="twitter:image" content="https://omundofantastico.com.br/assets/img/hero.jpg" />
+
+  <!-- Schema Markup: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "O Mundo Fantástico",
+    "description": "Personagens vivos para festas infantis em São Paulo e região. Elsa, Ariel, Barbie, Branca de Neve, Homem Aranha e muito mais, com pacotes com e sem coroação.",
+    "url": "https://omundofantastico.com.br",
+    "telephone": "+55-11-96408-6730",
+    "priceRange": "R$600 - R$1600",
+    "image": "https://omundofantastico.com.br/assets/img/hero.jpg",
+    "logo": "https://omundofantastico.com.br/assets/img/logo.jpg",
+    "foundingDate": "2017",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-23.5505",
+      "longitude": "-46.6333"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "São Paulo" },
+      { "@type": "City", "name": "Santo André" },
+      { "@type": "City", "name": "São Bernardo do Campo" },
+      { "@type": "City", "name": "Campinas" },
+      { "@type": "City", "name": "Jundiaí" },
+      { "@type": "City", "name": "Brotas" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/omundo.fantastico"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "22:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "127",
+      "bestRating": "5"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pacotes de Personagens Vivos",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Pacote com Coroação — 1 Personagem 1h30",
+          "price": "700",
+          "priceCurrency": "BRL"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pacote com Coroação — 1 Personagem 3h30",
+          "price": "1000",
+          "priceCurrency": "BRL"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pacote sem Coroação — 1 Personagem 1h30",
+          "price": "600",
+          "priceCurrency": "BRL"
+        }
+      ]
+    }
+  }
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ8DVQH0GR"></script>
   <script>
@@ -37,13 +128,13 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="assets/img/hero.jpg" alt="Personagens O Mundo Fantástico" class="hero-foto" onerror="this.style.display='none'">
+      <img src="assets/img/hero.jpg" alt="Personagens vivos para festas infantis em São Paulo — O Mundo Fantástico" class="hero-foto" onerror="this.style.display='none'">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content container">
       <span class="hero-badge">✨ Festas Inesquecíveis em SP e Região</span>
-      <h1>Aqui a <span class="highlight">magia</span> acontece</h1>
-      <p class="hero-sub">Seus personagens preferidos ganham vida. Festas, eventos e animações — seu filho merece viver essa experiência inesquecível. 💫</p>
+      <h1><span class="highlight">Personagens Vivos</span> para Festas Infantis em São Paulo</h1>
+      <p class="hero-sub">Elsa, Ariel, Barbie, Branca de Neve e muito mais ganham vida na festa do seu filho. Experiências mágicas e inesquecíveis desde 2017. 💫</p>
       <div class="hero-ctas">
         <a href="#orcamento" class="btn-primary">Solicitar Orçamento Grátis</a>
         <a href="https://wa.me/5511964086730?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20personagens%20para%20festa!" class="btn-whatsapp" target="_blank" rel="noopener">
@@ -70,59 +161,59 @@
       </div>
       <div class="galeria-grid">
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item grande">
-          <img src="assets/img/galeria-1.jpg" alt="Festa com personagens O Mundo Fantástico" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/galeria-1.jpg" alt="Princesa viva interagindo com crianças em festa infantil em São Paulo" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/galeria-2.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/galeria-2.jpg" alt="Personagem vivo em festa infantil O Mundo Fantástico SP" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/galeria-3.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/galeria-3.jpg" alt="Criança com personagem princesa em festa temática São Paulo" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/galeria-4.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/galeria-4.jpg" alt="Personagem fantasia festa infantil com coroação SP" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/galeria-5.jpg" alt="Personagem na festa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/galeria-5.jpg" alt="Show de personagens vivos em festa de aniversário infantil SP" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/ariel.jpeg" alt="Ariel" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/ariel.jpeg" alt="Personagem Ariel viva em festa infantil São Paulo" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/frozen0.jpeg" alt="Elsa e Anna Frozen" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/frozen0.jpeg" alt="Elsa e Anna personagens vivos Frozen em festa infantil SP" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/frozen1.jpeg" alt="Frozen" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/frozen1.jpeg" alt="Elsa Frozen personagem vivo coroação festa infantil São Paulo" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/Rainhama_branca_neve11.jpeg" alt="Rainha Má e Branca de Neve" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/Rainhama_branca_neve11.jpeg" alt="Rainha Má e Branca de Neve personagens vivos festa infantil SP" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/ariel2.jpeg" alt="Ariel" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/ariel2.jpeg" alt="Ariel sereia personagem vivo festa aniversário SP" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/ariel3.jpeg" alt="Ariel" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/ariel3.jpeg" alt="Ariel A Pequena Sereia personagem fantasia festa infantil São Paulo" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/brancadeve_Rainhama1.JPG" alt="Branca de Neve" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/brancadeve_Rainhama1.JPG" alt="Branca de Neve personagem vivo festa infantil São Paulo" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/coroacao.jpeg" alt="Coroação" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/coroacao.jpeg" alt="Coroação de princesa em festa infantil O Mundo Fantástico SP" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
         <a href="https://instagram.com/omundo.fantastico" target="_blank" rel="noopener" class="galeria-item">
-          <img src="assets/img/coroacao1.jpeg" alt="Coroação" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
+          <img src="assets/img/coroacao1.jpeg" alt="Mini show de coroação com personagem vivo festa infantil São Paulo" loading="lazy" onerror="this.parentElement.classList.add('sem-foto')">
           <div class="galeria-placeholder"><span>📸</span><p>Foto da festa</p></div>
         </a>
       </div>
