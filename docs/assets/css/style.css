@@ -979,6 +979,102 @@ section { padding: 80px 0; }
 .galeria-item.sem-foto img { display: none; }
 .galeria-item.sem-foto .galeria-placeholder { display: flex; }
 
+/* Overlay Instagram nas fotos da galeria */
+.galeria-item { position: relative; overflow: hidden; }
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(131,58,180,0.75), rgba(253,29,29,0.75));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.25s;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+.galeria-item:hover .galeria-overlay { opacity: 1; }
+
+/* Banner Instagram */
+.instagram-banner {
+  display: block;
+  text-decoration: none;
+  margin: 36px auto 0;
+  max-width: 700px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  border-radius: 20px;
+  padding: 3px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.instagram-banner:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(253,29,29,0.35); }
+.instagram-banner-inner {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.instagram-banner-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instagram-banner-texto { flex: 1; }
+.instagram-banner-handle {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+.instagram-banner-sub {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 2px;
+}
+.instagram-banner-stats {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.insta-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+.insta-stat strong {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+.instagram-banner-cta {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d);
+  color: white;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .instagram-banner-inner { flex-wrap: wrap; gap: 14px; }
+  .instagram-banner-stats { display: none; }
+  .instagram-banner-cta { width: 100%; text-align: center; }
+}
+
 .galeria-cta { text-align: center; margin-top: 36px; }
 
 .btn-instagram {
