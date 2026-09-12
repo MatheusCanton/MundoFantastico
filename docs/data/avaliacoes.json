@@ -1,0 +1,26 @@
+{
+  "_como_atualizar": "Chegou avaliação nova no Google? Copie o texto EXATAMENTE como está lá, coloque no topo da lista (mais nova primeiro) e atualize a 'nota' com a média que o Google mostra. Nome: primeiro nome + inicial do sobrenome.",
+  "nota": "5,0",
+  "avaliacoes": [
+    {
+      "nome": "Thais D.",
+      "estrelas": 5,
+      "texto": "Amei! Minha sobrinha ama a Jasmine, e a princesa encantou não só as crianças, como os adultos tbm! ❤️\nNa festa do meu filho vou fazer do homem aranha q já estou planejando!\nTenho certeza que meu filho vai adorar!\n🤩🥳"
+    },
+    {
+      "nome": "Barbara C.",
+      "estrelas": 5,
+      "texto": "As crianças adoraram a Branca de Neve! Minha sobrinha ficou super emocionada, realizou um sonho."
+    },
+    {
+      "nome": "Anna P.",
+      "estrelas": 5,
+      "texto": "Impecável! As fantasias são de altíssima qualidade, e a imersão dos personagens com a festa e as crianças faz toda a diferença. Dá para ver o cuidado e o profissionalismo em cada detalhe"
+    },
+    {
+      "nome": "Geovanna S.",
+      "estrelas": 5,
+      "texto": "São os melhores! Estão sempre presentes nas festas da minha família 🥰"
+    }
+  ]
+}

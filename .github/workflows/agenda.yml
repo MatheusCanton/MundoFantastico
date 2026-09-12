@@ -1,0 +1,47 @@
+name: Agenda do Disque Princesa
+
+# Lê a Google Agenda "Disque ao vivo" e atualiza docs/data/disponibilidade.json.
+# O endereço secreto da agenda fica em Settings > Secrets and variables > Actions,
+# com o nome AGENDA_ICS_URL — nunca no código.
+on:
+  schedule:
+    - cron: "7 * * * *"      # de hora em hora (minuto 7, fora do pico)
+  workflow_dispatch:          # botão "Run workflow" para atualizar na hora
+
+permissions:
+  contents: write
+
+concurrency:
+  group: agenda-disque
+  cancel-in-progress: false
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar leitor de agenda
+        run: pip install icalendar recurring-ical-events tzdata
+      - name: Ler a Google Agenda
+        env:
+          AGENDA_ICS_URL: ${{ secrets.AGENDA_ICS_URL }}
+        run: |
+          if [ -z "$AGENDA_ICS_URL" ]; then
+            echo "Endereço da agenda ainda não configurado (segredo AGENDA_ICS_URL) — nada a fazer."
+            exit 0
+          fi
+          python scripts/sync_agenda.py docs/data/disponibilidade.json
+      - name: Publicar só se a agenda mudou
+        run: |
+          if git diff --quiet -- docs/data/disponibilidade.json; then
+            echo "Agenda sem mudanças."
+            exit 0
+          fi
+          git config user.name "robo-da-agenda"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/disponibilidade.json
+          git commit -m "agenda: atualiza horários do Disque Princesa"
+          git push
