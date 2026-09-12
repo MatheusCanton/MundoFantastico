@@ -29,7 +29,7 @@
   <link rel="preload" href="assets/fonts/nunito-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- primeira foto do carrossel = maior elemento da tela: pede antes de tudo -->
-  <link rel="preload" as="image" href="assets/img/site/branca-de-neve-e-rainha-ma-festa-infantil.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/img/site/elsa-e-anna-frozen-festa-infantil.jpg" fetchpriority="high" />
 
   <script type="application/ld+json">
 {
@@ -199,6 +199,8 @@
     --rose: #C0386F;            /* ≥4.5:1 com texto branco em cima e como texto no fundo */
     --rose-soft: #F3C7D9;
     --rose-deep: #B62F65;
+    --rose-fill: #C0386F;       /* fundo rosa com texto branco: não clareia no tema escuro */
+    --rose-fill-deep: #B62F65;
     --erro: #B3261E;            /* mensagens de erro do formulário */
     --night: #2A0E2B;
     --night-2: #3B1439;
@@ -310,17 +312,18 @@
   .nav-links { display: flex; align-items: center; gap: 26px; }
   .nav-links a { text-decoration: none; font-weight: 700; font-size: 0.9rem; color: var(--ink-soft); transition: color 0.2s; }
   .nav-links a:hover { color: var(--rose); }
+  .nav-links a.btn, .nav-links a.btn:hover { color: #fff; }
   .btn { font-family: var(--f-body); font-weight: 800; text-decoration: none; border: none; cursor: pointer; border-radius: 999px; padding: 13px 26px; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: transform 0.18s, box-shadow 0.18s, background 0.2s; }
   .btn-primary { background: var(--ink); color: var(--on-night); box-shadow: var(--shadow-sm); }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-  .btn-rose { background: linear-gradient(135deg, var(--rose), var(--rose-deep)); color: #fff; box-shadow: 0 12px 28px -12px rgba(214,70,126,0.85); }
+  .btn-rose { background: linear-gradient(135deg, var(--rose-fill), var(--rose-fill-deep)); color: #fff; box-shadow: 0 12px 28px -12px rgba(214,70,126,0.85); }
   .btn-rose:hover { transform: translateY(-2px); }
   .btn-gold { background: linear-gradient(135deg, var(--gold-bright), var(--gold)); color: #2A0E2B; box-shadow: 0 10px 26px -12px rgba(185,138,46,0.9); }
   .btn-gold:hover { transform: translateY(-2px); }
   .btn-wa { background: #138043; color: #fff; }   /* 5:1 com texto branco */
   .btn-wa:hover { transform: translateY(-2px); background: #106E3A; }
   .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
-  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold-text); }
   .nav .btn { padding: 11px 22px; }
   .nav-right { display: flex; align-items: center; gap: 16px; }
   .hamburger { display: none; background: transparent; border: 1.5px solid var(--line); color: var(--ink); width: 42px; height: 42px; border-radius: 12px; cursor: pointer; place-items: center; }
@@ -408,7 +411,7 @@
   /* ===================== DISQUE PRINCESA ===================== */
   .disque { background: linear-gradient(180deg, var(--ground-2), var(--ground)); position: relative; }
   .disque-intro { text-align: center; max-width: 680px; margin: 0 auto 30px; }
-  .disque-intro .tag-new { display: inline-flex; align-items: center; gap: 8px; background: var(--rose); color: #fff; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; }
+  .disque-intro .tag-new { display: inline-flex; align-items: center; gap: 8px; background: var(--rose-fill); color: #fff; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; }
   .disque-intro h2 { font-size: clamp(2.3rem, 4.6vw, 3.5rem); }
   .disque-intro .lead { color: var(--ink-soft); font-size: 1.1rem; margin-top: 14px; }
   .char-picker { display: flex; flex-direction: column; align-items: center; gap: 13px; margin-bottom: 42px; }
@@ -416,7 +419,7 @@
   .picker-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
   .pick { font-family: var(--f-body); font-weight: 800; font-size: 0.9rem; cursor: pointer; border-radius: 999px; padding: 10px 18px; background: var(--card); color: var(--ink-soft); border: 1.5px solid var(--line); transition: color 0.18s, border-color 0.18s, transform 0.18s, background 0.18s; }
   .pick:hover { border-color: var(--rose); color: var(--rose); transform: translateY(-1px); }
-  .pick.active { background: linear-gradient(135deg, var(--rose), var(--rose-deep)); color: #fff; border-color: transparent; box-shadow: 0 10px 22px -10px rgba(214,70,126,0.8); }
+  .pick.active { background: linear-gradient(135deg, var(--rose-fill), var(--rose-fill-deep)); color: #fff; border-color: transparent; box-shadow: 0 10px 22px -10px rgba(214,70,126,0.8); }
   .pick:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   .prod-char { display: block; font-weight: 800; font-size: 0.82rem; color: var(--rose); margin-top: 3px; }
 
@@ -426,7 +429,7 @@
   .prod.hot { border: 1px solid color-mix(in srgb, var(--rose) 55%, transparent); box-shadow: var(--shadow); }
   .prod .thumb { position: relative; aspect-ratio: 4 / 5; overflow: hidden; }
   .prod .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-  .prod .thumb .live { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 5; background: var(--rose); color: #fff; font-weight: 800; font-size: 0.7rem; padding: 6px 12px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px -4px rgba(0,0,0,0.5); }
+  .prod .thumb .live { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 5; background: var(--rose-fill); color: #fff; font-weight: 800; font-size: 0.7rem; padding: 6px 12px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px -4px rgba(0,0,0,0.5); }
   .prod .thumb .live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; }
   .prod .thumb .live::after { content: ""; position: absolute; left: 12px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: #fff; animation: pulse 1.8s ease-out infinite; }
   @keyframes pulse { 0% { transform: scale(1); opacity: 0.7; } 70%, 100% { transform: scale(2.6); opacity: 0; } }
@@ -466,7 +469,7 @@
   .hora {
     min-width: 80px; padding: 10px 16px; border-radius: 999px; text-align: center; text-decoration: none;
     font-weight: 800; font-size: 0.95rem; font-variant-numeric: lining-nums tabular-nums;
-    background: linear-gradient(135deg, var(--rose), var(--rose-deep)); color: #fff;
+    background: linear-gradient(135deg, var(--rose-fill), var(--rose-fill-deep)); color: #fff;
     border: 1.5px solid transparent; transition: transform 0.18s;
   }
   a.hora:hover { transform: translateY(-2px); }
@@ -526,7 +529,7 @@
   .insta-txt { flex: 1; display: flex; flex-direction: column; gap: 2px; }
   .insta-txt b { font-size: 1.05rem; }
   .insta-txt span { color: var(--ink-soft); font-size: 0.92rem; }
-  .insta-cta { flex: none; font-weight: 800; font-size: 0.9rem; color: #fff; padding: 11px 18px; border-radius: 999px; background: linear-gradient(135deg, var(--rose), var(--rose-deep)); }
+  .insta-cta { flex: none; font-weight: 800; font-size: 0.9rem; color: #fff; padding: 11px 18px; border-radius: 999px; background: linear-gradient(135deg, var(--rose-fill), var(--rose-fill-deep)); }
   @media (max-width: 640px) { .insta-banner { flex-wrap: wrap; } .insta-cta { width: 100%; text-align: center; } }
 
   /* ===================== PERSONAGENS ===================== */
@@ -647,9 +650,9 @@
   .dep p { color: var(--ink); font-size: 1rem; margin: 14px 0 20px; font-style: italic; white-space: pre-line; }  /* mantém as quebras de linha do texto original */
   .dep .st .st-off { opacity: 0.25; }
   .dep .who { margin-top: auto; display: flex; align-items: center; gap: 12px; }
-  .dep .av { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--rose), var(--rose-deep)); }
+  .dep .av { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; font-size: 1.2rem; color: #fff; background: linear-gradient(135deg, var(--rose-fill), var(--rose-fill-deep)); }
   .dep .who b { display: block; font-size: 0.95rem; }
-  .dep .who span { font-size: 0.82rem; color: var(--ink-faint); }
+  .dep .who div span { font-size: 0.82rem; color: var(--ink-faint); }
   .dep .st { color: var(--gold-text); letter-spacing: 2px; font-size: 0.9rem; }
 
   /* ===================== SOBRE + ONDE ATENDEMOS ===================== */
@@ -694,7 +697,7 @@
   .fg[hidden] { display: none; }
   .form-nota { margin-top: 12px; text-align: center; font-size: 0.82rem; color: var(--ink-soft); }
   .form-ok { text-align: center; padding: 8px 4px; }
-  .form-ok .ok-ic { width: 56px; height: 56px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; font-size: 1.5rem; color: #fff; background: linear-gradient(135deg, var(--rose), var(--rose-deep)); }
+  .form-ok .ok-ic { width: 56px; height: 56px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; font-size: 1.5rem; color: #fff; background: linear-gradient(135deg, var(--rose-fill), var(--rose-fill-deep)); }
   .form-ok h3 { font-size: 1.9rem; margin-bottom: 8px; }
   .form-ok p { color: var(--ink-soft); margin-bottom: 16px; }
   @media (max-width: 860px) { .orc-grid { grid-template-columns: 1fr; gap: 36px; } }
@@ -823,16 +826,16 @@
       <svg class="sparkle" style="top:-4px; right:52px" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.4 8.4L22 12l-7.6 3.6L12 24l-2.4-8.4L2 12l7.6-3.6z"/></svg>
       <svg class="sparkle" style="bottom:80px; left:-6px; animation-delay:1s" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.4 8.4L22 12l-7.6 3.6L12 24l-2.4-8.4L2 12l7.6-3.6z"/></svg>
       <div class="arch" id="heroCarousel">
-        <div class="slide on"><img src="assets/img/site/branca-de-neve-e-rainha-ma-festa-infantil.jpg" width="1100" height="734" alt="Personagens vivas Branca de Neve e Rainha Má com a aniversariante em festa infantil em São Paulo" fetchpriority="high" decoding="async" /></div>
+        <div class="slide on"><img class="pos-frozen" src="assets/img/site/elsa-e-anna-frozen-festa-infantil.jpg" width="878" height="581" alt="Personagens vivas Elsa e Anna, de Frozen, com a aniversariante em festa infantil em São Paulo" fetchpriority="high" decoding="async" /></div>
         <div class="slide"><img class="pos-rapunzel" src="assets/img/site/rapunzel-personagem-viva-festa-infantil.jpg" width="754" height="1018" alt="Personagem viva Rapunzel abraçando duas crianças em festa infantil" loading="lazy" decoding="async" /></div>
-        <div class="slide"><img class="pos-frozen" src="assets/img/site/elsa-e-anna-frozen-festa-infantil.jpg" width="878" height="581" alt="Personagens vivas Elsa e Anna, de Frozen, com a aniversariante em festa infantil" loading="lazy" decoding="async" /></div>
+        <div class="slide"><img src="assets/img/site/branca-de-neve-e-rainha-ma-festa-infantil.jpg" width="1100" height="734" alt="Personagens vivas Branca de Neve e Rainha Má com a aniversariante em festa infantil" loading="lazy" decoding="async" /></div>
         <button class="arrow prev" id="heroPrev" type="button" aria-label="Foto anterior">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18 9 12l6-6"/></svg>
         </button>
         <button class="arrow next" id="heroNext" type="button" aria-label="Próxima foto">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </button>
-        <span class="poster-tag" id="heroCap">✦ Branca de Neve &amp; Rainha Má</span>
+        <span class="poster-tag" id="heroCap">✦ Elsa &amp; Anna</span>
       </div>
       <div class="dots" id="heroDots">
         <button type="button" class="on" aria-label="Foto 1"></button>
@@ -1254,7 +1257,7 @@
     var slides = box.querySelectorAll('.slide');
     var dots = dotBox.querySelectorAll('button');
     var cap = document.getElementById('heroCap');
-    var CAPS = ['✦ Branca de Neve & Rainha Má', '✦ Rapunzel e as princesas da casa', '✦ Elsa & Anna'];
+    var CAPS = ['✦ Elsa & Anna', '✦ Rapunzel e as princesas da casa', '✦ Branca de Neve & Rainha Má'];
     var i = 0, timer = null;
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
