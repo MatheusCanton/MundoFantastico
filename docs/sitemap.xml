@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://omundofantastico.com.br/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/elsa-e-anna-frozen-festa-infantil.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/rapunzel-personagem-viva-festa-infantil.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/branca-de-neve-e-rainha-ma-festa-infantil.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/branca-de-neve-com-crianca.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/branca-de-neve-personagem-viva.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/rapunzel-com-aniversariante.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/festa-branca-de-neve-e-rainha-ma.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/elsa-e-anna-com-aniversariante.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/ariel-com-crianca-festa-infantil.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/cena-branca-de-neve-e-rainha-ma.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/rainha-ma-personagem-viva.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/elsa-frozen-personagem-viva.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/ariel-pequena-sereia-personagem-viva.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/rapunzel-personagem-viva.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/jasmine-aladdin-personagem-viva.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/barbie-personagem-viva.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://omundofantastico.com.br/assets/img/site/alice-pais-das-maravilhas-personagem-viva.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>
