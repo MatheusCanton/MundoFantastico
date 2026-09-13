@@ -1364,7 +1364,7 @@
     function porVez() { return window.innerWidth <= 760 ? 1 : 2; }
     function paginas() { return Math.ceil(cards.length / porVez()); }
     function passo() { return (cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth) * porVez(); }
-    function atual() { return Math.round(track.scrollLeft / passo()); }
+    function atual() { var s = passo(); return s > 0 ? Math.round(track.scrollLeft / s) : 0; }   /* sem largura (fora da tela): página 0 */
 
     function marcar(p) {
       if (p == null) { p = atual(); }   /* só mede a tela quando a pessoa rola */
@@ -1385,7 +1385,8 @@
     }
     function ir(p) {
       var n = paginas();
-      p = (p + n) % n;
+      if (!n) return;   /* sem avaliações carregadas, não há para onde ir */
+      p = ((p % n) + n) % n;
       var alvo = cards[p * porVez()];
       track.scrollTo({ left: alvo.offsetLeft - cards[0].offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
     }
@@ -1742,6 +1743,8 @@
       if (primeiro) { primeiro.focus(); return; }
 
       var url = WA_NUM + encodeURIComponent(montarMensagem());
+      var preco = /R\$ ?(\d+)/.exec(quero.value);
+      registrarLead('formulario', { produto: quero.value, personagem: $('fPersonagem').value, value: preco ? Number(preco[1]) : null });
       okLink.href = url;
       window.open(url, '_blank', 'noopener');   /* no próprio toque, para não ser bloqueado como pop-up */
       form.hidden = true;
@@ -1761,6 +1764,40 @@
     $('okEditar').addEventListener('click', function () { ok.hidden = true; form.hidden = false; $('fNome').focus(); });
     ajustarCampos();
   })();
+
+  /* ===== Medição de pedidos (Google Analytics, evento padrão generate_lead) =====
+     Conta o CLIQUE para pedir — a venda fecha no WhatsApp. Vai só o tipo de pedido,
+     a princesa e o valor; nome e telefone nunca saem da página. Sem Analytics, não faz nada. */
+  function registrarLead(tipo, extra) {
+    if (typeof window.gtag !== 'function') return;
+    var p = { lead_tipo: tipo };
+    for (var k in extra) { if (extra[k] != null && extra[k] !== '') p[k] = extra[k]; }
+    if (p.value) p.currency = 'BRL';
+    window.gtag('event', 'generate_lead', p);
+  }
+  var LEAD_PACOTE = { 'encanto': 'festa_encanto', 'mágico': 'festa_magico', 'real': 'festa_real' };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"]');
+    /* okLink reabre o pedido do formulário, que já foi contado no envio;
+       horário que fechou (24h) é barrado pela agenda com preventDefault */
+    if (!a || a.id === 'okLink' || e.defaultPrevented) return;
+    var tipo = 'whatsapp_geral', extra = {};
+    if (a.id === 'buy-0') { tipo = 'disque_aniversario'; extra = { personagem: CURRENT_CHAR, value: 79 }; }
+    else if (a.id === 'buy-1') { tipo = 'disque_recado'; extra = { personagem: CURRENT_CHAR, value: 89 }; }
+    else if (a.id === 'buy-2') { tipo = 'disque_videochamada'; extra = { personagem: CURRENT_CHAR, value: 99 }; }
+    else if (a.classList.contains('hora')) {
+      tipo = 'disque_videochamada_horario';
+      extra = { personagem: CURRENT_CHAR, value: 99, horario: a.getAttribute('data-dia') + ' ' + a.getAttribute('data-hora') };
+    }
+    else if (a.closest('.pac')) {
+      var k = a.closest('.pac').querySelector('.kicker');
+      tipo = LEAD_PACOTE[(k ? k.textContent : '').trim().toLowerCase()] || 'festa_pacote';
+    }
+    else if (a.classList.contains('wa-float')) { tipo = 'whatsapp_flutuante'; }
+    else if (a.closest('#orcamento')) { tipo = 'whatsapp_orcamento'; }
+    else if (a.closest('footer')) { tipo = 'whatsapp_rodape'; }
+    registrarLead(tipo, extra);
+  });
 </script>
 </body>
 </html>
