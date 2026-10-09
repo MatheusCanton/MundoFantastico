@@ -1,43 +1,6 @@
 {
-  "atualizado": "2026-10-08T05:50-03:00",
+  "atualizado": "2026-10-09T05:54-03:00",
   "dias": [
-    {
-      "data": "2026-10-08",
-      "horarios": [
-        {
-          "hora": "12:00",
-          "status": "livre"
-        },
-        {
-          "hora": "13:00",
-          "status": "livre"
-        },
-        {
-          "hora": "14:00",
-          "status": "livre"
-        },
-        {
-          "hora": "15:00",
-          "status": "livre"
-        },
-        {
-          "hora": "16:00",
-          "status": "livre"
-        },
-        {
-          "hora": "17:00",
-          "status": "livre"
-        },
-        {
-          "hora": "18:00",
-          "status": "livre"
-        },
-        {
-          "hora": "19:00",
-          "status": "livre"
-        }
-      ]
-    },
     {
       "data": "2026-10-13",
       "horarios": [
