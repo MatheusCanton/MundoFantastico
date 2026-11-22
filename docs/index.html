@@ -308,6 +308,8 @@
   .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; }
   .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
   .brand .mark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle at 32% 28%, var(--gold-bright), var(--gold) 58%, var(--rose-deep)); color: #fff; box-shadow: 0 3px 12px rgba(182,47,101,0.4); }
+  .brand .mark.selo { background: none; box-shadow: 0 3px 12px rgba(74,20,96,0.45); overflow: hidden; padding: 0; }
+  .brand .mark.selo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
   .brand .name { font-family: var(--f-script); font-size: 1.55rem; color: var(--ink); line-height: 1; }
   .nav-links { display: flex; align-items: center; gap: 26px; }
   .nav-links a { text-decoration: none; font-weight: 700; font-size: 0.9rem; color: var(--ink-soft); transition: color 0.2s; }
@@ -367,6 +369,7 @@
   .arch .slide.on { opacity: 1; }
   .arch .slide img.pos-rapunzel { object-position: 52% 28%; }
   .arch .slide img.pos-frozen   { object-position: 50% 40%; }
+  .arch .slide img.pos-abraco   { object-position: 50% 22%; }
   .arch .arrow {
     position: absolute; top: 50%; transform: translateY(-50%); z-index: 6;
     width: 38px; height: 38px; border-radius: 50%; cursor: pointer;
@@ -775,7 +778,7 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
-      <span class="mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 5.2L20 8l-4 3.6L17 18l-5-3-5 3 1-6.4L4 8l5.8-.8z"/></svg></span>
+      <span class="mark selo"><img src="assets/img/site/selo-mundo-fantastico.png" width="40" height="40" decoding="async" alt=""/></span>
       <span class="name">O Mundo Fantástico</span>
     </a>
     <div class="nav-right">
@@ -829,6 +832,7 @@
         <div class="slide on"><img class="pos-frozen" src="assets/img/site/elsa-e-anna-frozen-festa-infantil.jpg" width="878" height="581" alt="Personagens vivas Elsa e Anna, de Frozen, com a aniversariante em festa infantil em São Paulo" fetchpriority="high" decoding="async" /></div>
         <div class="slide"><img class="pos-rapunzel" src="assets/img/site/rapunzel-personagem-viva-festa-infantil.jpg" width="754" height="1018" alt="Personagem viva Rapunzel abraçando duas crianças em festa infantil" loading="lazy" decoding="async" /></div>
         <div class="slide"><img src="assets/img/site/branca-de-neve-e-rainha-ma-festa-infantil.jpg" width="1100" height="734" alt="Personagens vivas Branca de Neve e Rainha Má com a aniversariante em festa infantil" loading="lazy" decoding="async" /></div>
+        <div class="slide"><img class="pos-abraco" src="assets/img/site/cinderela-e-ariel-abraco-festa-infantil.jpg" width="825" height="1100" alt="Cinderela e Ariel abraçando a aniversariante em festa infantil em São Paulo" loading="lazy" decoding="async" /></div>
         <button class="arrow prev" id="heroPrev" type="button" aria-label="Foto anterior">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18 9 12l6-6"/></svg>
         </button>
@@ -841,6 +845,7 @@
         <button type="button" class="on" aria-label="Foto 1"></button>
         <button type="button" aria-label="Foto 2"></button>
         <button type="button" aria-label="Foto 3"></button>
+        <button type="button" aria-label="Foto 4"></button>
       </div>
       <div class="float-card float-a"><span>Vídeos a<br/>partir de</span><span class="big">R$79</span></div>
       <div class="float-card float-b"><span>Resposta<br/>em até</span><span class="big">24h</span></div>
@@ -1257,7 +1262,7 @@
     var slides = box.querySelectorAll('.slide');
     var dots = dotBox.querySelectorAll('button');
     var cap = document.getElementById('heroCap');
-    var CAPS = ['✦ Elsa & Anna', '✦ Rapunzel e as princesas da casa', '✦ Branca de Neve & Rainha Má'];
+    var CAPS = ['✦ Elsa & Anna', '✦ Rapunzel e as princesas da casa', '✦ Branca de Neve & Rainha Má', '✦ Cinderela & Ariel'];
     var i = 0, timer = null;
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
